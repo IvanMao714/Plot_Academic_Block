@@ -1,17 +1,7 @@
 %! Author = Ivan
 %! Date = 2024-05-07
 \documentclass[tikz]{standalone}
-\usepackage{pgfplots}
-\usepackage{ifthen}
-\usepackage{amsmath}
-\pgfplotsset{compat=1.18}
-\usetikzlibrary{positioning}
-\DeclareMathOperator{\sigm}{sigm}
-\newcommand{\diff}{\mathop{}\!\mathrm{d}}
-\tikzset{
-    hiddennode/.style={draw, circle, fill=green!20, text centered},
-    signal/.style={->, >=latex, line width=1.5pt, draw=black},
-}
+\usepackage{lib/NeuralNetworkUnit}
 \begin{document}
    \begin{tikzpicture}[]
     \def\pindist{35pt}
