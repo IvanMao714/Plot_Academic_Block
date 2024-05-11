@@ -2,6 +2,7 @@
 %! Date = 2024-05-07
 \documentclass[tikz]{standalone}
 \usepackage{lib/basic}
+
 \begin{document}
    \begin{tikzpicture}[]
     \def\pindist{35pt}
@@ -20,6 +21,7 @@
         ] (N2) at (+120pt,0) {$\diff f$};
     \node[annot, text width=200pt, align=center, above=40pt of N1] (l1) {Forwardpass};
     \node[annot, text width=200pt, align=center, above=40pt of N2] (l2) {Backwardpass};
-    \draw[signal, -] (0,-70pt) -- (0,+80pt);
+%    \draw[signal, -] (0,-70pt) -- (0,+80pt);
+%       \draw (1,1) ellipse (1 and 1);
     \end{tikzpicture}
 \end{document}

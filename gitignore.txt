@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OSX useful to ignore
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# IntelliJ Idea family of suites
+.idea
+*.iml
+
+# Briefcase log files
+logs/
+
+# Latex Compile File
+auxil/
+out/
