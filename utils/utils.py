@@ -6,7 +6,7 @@
  @File    : utils.py
  @Description : 
 """
-from element.line import Line, NeuralLine
+from element.line import Line
 
 
 # This function loads the environment for the LaTeX document.
