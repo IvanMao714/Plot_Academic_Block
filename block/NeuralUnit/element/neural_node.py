@@ -6,6 +6,7 @@
  @File    : neural_node.py
  @Description : 
 """
+from block.NeuralUnit.element.neural_line import NeuralLine
 from element.node import Node
 from utils import generate_doc
 
@@ -15,12 +16,17 @@ class NeuralNode(Node):
     The NeuralNode class represents a node in a neural network diagram. It has attributes for color, shape, size, and position.
     """
 
-    def __init__(self, board_color='black', shape='circle', fill_color='green', opacity='20', node_size='38pt', pin=[]):
+    def __init__(self, x, y, label, formula, board_color='black', shape='circle', fill_color='green', opacity='20',
+                 node_size='38pt', pin=[]):
         self.color = board_color
         self.shape = shape
         self.fill_color = fill_color
         self.opacity = opacity
         self.node_size = node_size
+        self.x = x
+        self.y = y
+        self.label = label
+        self.formula = formula
 
         self.pin = pin
 
@@ -31,17 +37,19 @@ class NeuralNode(Node):
         return self.__class__.__name__ + f"""/.style={{draw={self.color}, {self.shape}, fill={self.fill_color}!{self.opacity}, text centered}},"""
 
     def add_pin(self, pin):
-        self.pin.append(pin)
+        self.pin.append(pin.draw())
 
-    def draw(self, x, y, label, formula='$f(x)$'):
+    def draw(self):
         return_str = f'\\node[{self.__class__.__name__}, text width={self.node_size}, minimum size={self.node_size},'
         for p in self.pin:
             return_str += p
-        return_str += f'] ({label}) at ({x},{y}) {{{formula}}};'
+        return_str += f'] ({self.label}) at ({self.x},{self.y}) {{{self.formula}}};'
 
         return return_str
 
-if __name__ == '__main__':
-    n = NeuralNode()
-    generate_doc([n], '../../../neural_node.tex')
 
+if __name__ == '__main__':
+    n = NeuralNode(0, 0, 'A', 'x1')
+    n.add_pin(NeuralLine('in', '->', 'left', '35pt'))
+    n.add_pin(NeuralLine('in', '->', 'right', '35pt'))
+    generate_doc([n])

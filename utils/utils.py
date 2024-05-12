@@ -54,8 +54,8 @@ def generate_doc(arch, pathname="../file.tex"):
         f.write(load_style(arch))
         f.write(init_doc())
         for c in arch:
-            print(c)
-            f.write(c.draw(0, 0, 1, 1))
+            print(c.draw())
+            f.write(c.draw())
 
         f.write(end_doc())
 

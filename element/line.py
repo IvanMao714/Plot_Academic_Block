@@ -13,7 +13,7 @@ class Line:
     The Signal class represents a signal in a neural network diagram. It has attributes for color, arrow type, width, and line type.
     """
 
-    def __init__(self, color='black', arrow_type='->', width='1.5pt', line_type='line'):
+    def __init__(self, color='black', arrow_type='->', width='1.5pt', line_type='line', x1=0, y1=0, x2=1, y2=1):
         """
         Initialize a Signal object with the given color, arrow type, width, and line type. Defaults are provided for all parameters.
         """
@@ -21,6 +21,17 @@ class Line:
         self.arrow_type = arrow_type
         self.width = width
         self.line_type = line_type
+        self.x1 = x1
+        self.y1 = y1
+        self.x2 = x2
+        self.y2 = y2
+
+    id_counter = 0
+
+    @classmethod
+    def generate_id(cls):
+        cls.id_counter += 1
+        return cls.id_counter
 
     def get_style(self):
         """
@@ -28,16 +39,8 @@ class Line:
         """
         return self.__class__.__name__ + f"""/.style={{draw={self.color}, {self.arrow_type}, {self.line_type} width={self.width}}},"""
 
-    def __draw(self, x1, y1, x2, y2):
-        """
-        Returns a string representing a LaTeX command to draw the signal from (x1, y1) to (x2, y2).
-        """
-        return f'\n\draw[{self.__class__.__name__}] ({x1},{y1}) -- ({x2},{y2});'
-
-    def draw(self, *args):
+    def draw(self):
         """
         Public method that calls the private __draw method with the given arguments.
         """
-        return self.__draw(*args)
-
-
+        return f'\n\draw[{self.__class__.__name__}] ({self.x1},{self.y1}) -- ({self.x2},{self.y2});'
