@@ -33,5 +33,5 @@ class NeuralLine(Line):
         """
         Returns a string representing a LaTeX command to draw the neural signal with the given direction, formula, and position.
         """
-        return """pin={[pin edge=""" + self.direction_str + f""", pin distance={self.pindist}]""" + self.position + """:""" + self.formula + """},
+        return """pin={[pin edge=""" + self.direction_str + f""", pin distance={self.pindist}]""" + self.position + """:{$""" + self.formula + """$}},
                 """

@@ -48,7 +48,7 @@ def end_doc():
 # This function generates the LaTeX document.
 # It takes a list 'arch' of objects, each of which should have a 'draw' method, and a string 'pathname' which is the path to the file where the document will be written.
 # It writes the LaTeX commands to load the environment, set the style, begin the document, draw the objects in 'arch', and end the document to the file at 'pathname'.
-def generate_doc(arch, pathname="../file.tex"):
+def generate_doc(arch, pathname="../../file.tex"):
     with open(pathname, "w") as f:
         f.write(load_environment('basic'))
         f.write(load_style(arch))

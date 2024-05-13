@@ -3,10 +3,11 @@
 \usepackage{lib/basic}
 \tikzset{
 NeuralNode/.style={draw=black, circle, fill=green!20, text centered},
+NeuralLine/.style={draw=black, ->, line width=1.5pt},NeuralTittle/.style={text width=200pt, text centered},
 }
     \begin{document}
-    \begin{tikzpicture}[]\node[NeuralNode, text width=38pt, minimum size=38pt,pin={[pin edge={-latex}, pin distance=35pt]left:->},
-                pin={[pin edge={-latex}, pin distance=35pt]right:->},
-                ] (A) at (0,0) {x1};
+    \begin{tikzpicture}[]\node[NeuralNode, text width=38pt, minimum size=38pt,pin={[pin edge={-latex}, pin distance=35pt]left:{$x_1$}},
+                pin={[pin edge={-latex}, pin distance=35pt]left:{$x_1$}},
+                ] (A) at (0,0) {x1};\node[NeuralTittle, text width=200pt, above=40pt of A] (2) {x1};
     \end{tikzpicture}
     \end{document}
