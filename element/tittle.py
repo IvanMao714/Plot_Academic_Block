@@ -11,7 +11,7 @@ from abc import ABC
 from element.node import Node
 
 
-class NeuralTittle(Node):
+class Tittle(Node):
     def __init__(self, text_width, text_position, text_align='centered', name='', formula=''):
         self.text_width = text_width
         self.text_position = text_position
@@ -23,4 +23,6 @@ class NeuralTittle(Node):
         return self.__class__.__name__ + f"""/.style={{text width={self.text_width}, text {self.text_align}}},"""
 
     def draw(self):
-        return f'\\node[{self.__class__.__name__}, text width={self.text_width}, above={self.text_position}] ({self.name}) {{{self.formula}}};'
+        return f'\n\t\\node[{self.__class__.__name__}, text width={self.text_width}, above of={self.text_position}] ({self.name}) {{{self.formula}}};'
+
+

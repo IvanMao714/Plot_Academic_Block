@@ -34,13 +34,13 @@ class NeuralNode(Node):
         """
         Returns a string representing the style of the node in LaTeX format.
         """
-        return self.__class__.__name__ + f"""/.style={{draw={self.color}, {self.shape}, fill={self.fill_color}!{self.opacity}, text centered}},"""
+        return self.label + f"""/.style={{draw={self.color}, {self.shape}, fill={self.fill_color}!{self.opacity}, text centered}},"""
 
     def add_pin(self, pin):
         self.pin.append(pin.draw())
 
     def draw(self):
-        return_str = f'\\node[{self.__class__.__name__}, text width={self.node_size}, minimum size={self.node_size},'
+        return_str = f'\\node[{self.label}, text width={self.node_size}, minimum size={self.node_size},'
         for p in self.pin:
             return_str += p
         return_str += f'] ({self.label}) at ({self.x},{self.y}) {{{self.formula}}};'
