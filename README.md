@@ -16,14 +16,15 @@ List of using steps:
     ```bash
     git clone https://github.com/IvanMao714/Plot_Academic_Block.git
     ```
-- [x] run neturalnetwork.py
+- [x] Run neturalnetwork.py
+  
   ```bash
-    python neturalnetwork.py
-   ```
-- [x] generate the latex file and compile it
+  python neturalnetwork.py
+  ```
+- [x] Generate the latex file and compile it
   ```bash
-    pdflatex output.tex
-   ```
+  pdflatex output.tex
+  ```
   
 
 ## Contributor
