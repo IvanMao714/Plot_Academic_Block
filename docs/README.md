@@ -1,7 +1,7 @@
 # Academic Plot Block
  Project of using simple python code snippets to plot academic figures.
 <p align="center">
-  <img src=".\doc\fig\example.png" style="zoom:50%;" />
+  <img src="./fig/example.png" style="zoom:50%;" />
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=%233776AB">
@@ -18,11 +18,11 @@ List of using steps:
     ```
 - [x] run neturalnetwork.py
   ```bash
-    python neturalnetwork.py
+  python neturalnetwork.py
    ```
 - [x] generate the latex file and compile it
   ```bash
-    pdflatex output.tex
+  pdflatex output.tex
    ```
   
 
