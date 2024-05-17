@@ -1,13 +1,14 @@
 # Academic Plot Block
  Project of using simple python code snippets to plot academic figures.
 <p align="center">
-  <img src=".\doc\fig\example.png" style="zoom:50%;" />
+  <img src=".\docs\fig\example.png" style="zoom:50%;" />
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=%233776AB">
     <img src="https://img.shields.io/badge/Latex-orange?style=for-the-badge&logo=latex&logoColor=%23008080">
     <img src="https://img.shields.io/github/last-commit/IvanMao714/Plot_Academic_Block?logoColor=blue&style=for-the-badge"/>
 </p>
+
 
 ## Quick Start
 
