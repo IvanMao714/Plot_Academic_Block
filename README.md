@@ -9,22 +9,22 @@
     <img src="https://img.shields.io/github/last-commit/IvanMao714/Plot_Academic_Block?logoColor=blue&style=for-the-badge"/>
 </p>
 
-## Usage
+## Usage Example
 
 List of using steps:
 - [x] Clone the repository
     ```bash
     git clone https://github.com/IvanMao714/Plot_Academic_Block.git
     ```
-- [x] run neturalnetwork.py
+- [x] run neuralnetwork.py
   ```bash
-    python neturalnetwork.py
+  python neuralnetwork.py
    ```
 - [x] generate the latex file and compile it
   ```bash
-    pdflatex output.tex
+  pdflatex output.tex
    ```
-  
+You can see the [document](https://ivanmao714.github.io/Plot_Academic_Block)  here.  
 
 ## Contributor
 

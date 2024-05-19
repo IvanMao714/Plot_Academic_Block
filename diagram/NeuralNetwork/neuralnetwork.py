@@ -40,5 +40,5 @@ if __name__ == '__main__':
         {'node_type': NeuralNetworkNode('H', 'black', 'green', 20, 'y'), 'number': 4,
          'text_content': 'Hidden', 'text_position': ["H1", "H1"]},
     ]
-    n = NeuralNetwork(nodes, 0)
+    n = NeuralNetwork(nodes)
     generate_doc(n.generate())
