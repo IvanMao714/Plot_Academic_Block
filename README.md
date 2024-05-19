@@ -1,7 +1,7 @@
 # Academic Plot Block
  Project of using simple python code snippets to plot academic figures.
 <p align="center">
-  <img src=".\docs\fig\example.png" style="zoom:50%;" />
+  <img src="./docs/fig/example.png" style="zoom:50%;" />
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=%233776AB">
@@ -9,23 +9,21 @@
     <img src="https://img.shields.io/github/last-commit/IvanMao714/Plot_Academic_Block?logoColor=blue&style=for-the-badge"/>
 </p>
 
-
-## Quick Start
+## Usage
 
 List of using steps:
 - [x] Clone the repository
     ```bash
     git clone https://github.com/IvanMao714/Plot_Academic_Block.git
     ```
-- [x] Run neturalnetwork.py
-  
+- [x] run neturalnetwork.py
   ```bash
-  python neturalnetwork.py
-  ```
-- [x] Generate the latex file and compile it
+    python neturalnetwork.py
+   ```
+- [x] generate the latex file and compile it
   ```bash
-  pdflatex output.tex
-  ```
+    pdflatex output.tex
+   ```
   
 
 ## Contributor

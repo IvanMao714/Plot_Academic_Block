@@ -6,12 +6,11 @@
  @File    : neuralnetwork.py
  @Description : 
 """
-from block.NeuralUnit.element.neural_line import NeuralLine
+
 from diagram.NeuralNetwork.block.neurallinelayer import NeuralLineLayer
 from diagram.NeuralNetwork.block.neuralnodelayer import NeuralNodeLayer
 from diagram.NeuralNetwork.element.neural_node import NeuralNetworkNode
 from diagram.NeuralNetwork.element.neural_tittle import NeuralNetworkTittle
-from element.tittle import Tittle
 from utils import generate_doc
 
 
@@ -36,11 +35,10 @@ class NeuralNetwork:
 
 if __name__ == '__main__':
     nodes = [
-        {'node_type': NeuralNetworkNode('I', 'black', 'green', 20, '3'), 'number': 3,
+        {'node_type': NeuralNetworkNode('I', 'black', 'green', 20, 'x'), 'number': 3,
          'text_content': 'Input', 'text_position': ["I1", "H1"]},
-        {'node_type': NeuralNetworkNode('H', 'black', 'green', 20, '3'), 'number': 4,
+        {'node_type': NeuralNetworkNode('H', 'black', 'green', 20, 'y'), 'number': 4,
          'text_content': 'Hidden', 'text_position': ["H1", "H1"]},
-
     ]
     n = NeuralNetwork(nodes, 0)
     generate_doc(n.generate())
