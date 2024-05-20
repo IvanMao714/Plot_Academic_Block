@@ -1,7 +1,7 @@
 # Academic Plot Block
  Project of using simple python code snippets to plot academic figures.
 <p align="center">
-  <img src="./docs/fig/example.png" />
+  <img src="./fig/example.png"  />
 
   
 </p>

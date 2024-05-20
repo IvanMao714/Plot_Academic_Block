@@ -46,3 +46,61 @@ nu = NeuralUnit(NeuralNode(0, 0, 'A', '\diff f'), line_list,
 generate_doc([nu])
 ```
 ![neural_unit_example](../fig/neuralunit_example.jpg)
+
+## NeuralLineLayer
+
+The `NeuralLineLayer` class represents a layer of connections (lines) in a neural network diagram. Each instance of this class connects a 'front' layer of nodes to a 'behind' layer of nodes.
+
+> [!CAUTION]
+> 
+> This class is not meant to be used directly. It is used by the [NeuralNetwork](./Diagram.md/#neuralnetwork) class to create the lines in the neural network diagram.
+
+
+
+### Attributes
+- `front_layer`(NeuralNodeLayer): The layer of nodes that the lines in this layer will start from.
+- `behind_layer`(NeuralNodeLayer): The layer of nodes that the lines in this layer will end at.
+
+### Methods
+
+#### def get_style(self):
+Returns the style of the lines in this layer as a string.
+- Parameters: None
+- Returns: The style of the lines in this layer as a string.
+
+#### def draw(self):
+Returns a string that represents the lines in this layer in a format that can be used to draw them.
+- Parameters: None
+- Returns: A string that represents the lines in this layer in a format that can be used to draw them.
+
+## NeuralNodeLayer
+The `NeuralNodeLayer` class represents a layer of nodes in a neural network diagram. Each instance of this class represents a layer of nodes, with each node having a specific type and number.
+
+> [!CAUTION]
+> 
+> This class is not meant to be used directly. It is used by the [NeuralNetwork](./Diagram.md/#neuralnetwork) class to create the lines in the neural network diagram.
+
+### Attributes
+- `node_type`(NeuralNode): The type of nodes in this layer.
+- `node_number`(Integer): The number of nodes in this layer.
+- `horizon`(Double): The horizontal distance between the nodes in this layer.The horizon of the neural network. The horizon value is used to determine y-axis position of the nodes in the diagram. If the horizon is not specified, the nodes are placed on the top of the diagram. As below is the figure of horizon function.
+![horizon](../fig/horizon_comparation.png)
+- `front_layer`(NeuralNodeLayer): The layer in front of this layer. Default is None.
+
+### Methods
+
+#### def get_style(self):
+Returns the style of the lines in this layer as a string.
+- Parameters: None
+- Returns: The style of the lines in this layer as a string.
+
+#### def calculate_height(self):
+Calculates and returns the height of this layer.
+- Parameters: None 
+- Return: The height of this layer.
+- Raises ValueError: If the horizon is None.
+
+#### def draw(self):
+Returns a string that represents the lines in this layer in a format that can be used to draw them.
+- Parameters: None
+- Returns: A string that represents the lines in this layer in a format that can be used to draw them.
