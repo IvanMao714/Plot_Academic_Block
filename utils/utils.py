@@ -61,7 +61,6 @@ def generate_doc(arch, pathname=os.path.join(os.path.join(os.path.dirname(__file
         f.write(load_style(arch))
         f.write(init_doc())
         for c in arch:
-            print(c.draw())
             f.write(c.draw())
 
         f.write(end_doc())

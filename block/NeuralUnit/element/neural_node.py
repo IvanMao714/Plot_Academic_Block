@@ -43,7 +43,7 @@ class NeuralNode(Node):
         return_str = f'\\node[{self.label}, text width={self.node_size}, minimum size={self.node_size},'
         for p in self.pin:
             return_str += p
-        return_str += f'] ({self.label}) at ({self.x},{self.y}) {{{self.formula}}};'
+        return_str += f'] ({self.label}) at ({self.x},{self.y}) {{${self.formula}$}};'
 
         return return_str
 

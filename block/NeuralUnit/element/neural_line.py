@@ -16,9 +16,9 @@ class NeuralLine(Line):
 
         super().__init__()
         if direction == 'in':
-            self.direction_str = '{-latex}'
-        elif direction == 'out':
             self.direction_str = '{latex-}'
+        elif direction == 'out':
+            self.direction_str = '{-latex}'
         else:
             raise ValueError('direction must be in or out')
         self.formula = formula

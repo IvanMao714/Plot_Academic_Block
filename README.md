@@ -1,7 +1,9 @@
 # Academic Plot Block
  Project of using simple python code snippets to plot academic figures.
 <p align="center">
-  <img src="./docs/fig/example.png" style="zoom:50%;" />
+  <img src="./docs/fig/example.png" style="zoom:20%;" />
+<img src="./docs/fig/neuralunit_example.jpg" style="zoom:25%;" />
+  
 </p>
 <p align="center">
     <img src="https://img.shields.io/badge/Python-yellow?style=for-the-badge&logo=python&logoColor=%233776AB">

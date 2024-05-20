@@ -9,10 +9,12 @@ The `NeuralNetwork` class is used to generate a neural network diagram. The clas
 - `horizon=None`: The horizon of the neural network. The horizon value is used to determine y-axis position of the nodes in the diagram. If the horizon is not specified, the nodes are placed on the top of the diagram. As below is the figure of horizon function.
 ![horizon](../fig/horizon_comparation.png)
 ### Methods
-#### generate(self):
+#### def generate(self):
+
 Generates the neural network diagram. 
 - Parameters: None
 - Returns: The list of nodes in the neural network diagram.
+
 ##### Example:
 ```python
 nodes = [
