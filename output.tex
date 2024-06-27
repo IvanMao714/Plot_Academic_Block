@@ -2,11 +2,34 @@
 \documentclass[tikz]{standalone}
 \usepackage{lib/basic}
 \tikzset{
-A/.style={draw=black, circle, fill=green!20, text centered},
+I/.style={draw=black, fill=orange!20, circle, inner 
+        sep=0pt, text width=22pt, align=center, line width=1.0pt},
+H/.style={draw=black, fill=green!20, circle, inner 
+        sep=0pt, text width=22pt, align=center, line width=1.0pt},
+NeuralLineLayer/.style={arrows={latex-},draw=black,line width=1.5pt,rounded corners=4pt},
+O/.style={draw=black, fill=blue!20, circle, inner 
+        sep=0pt, text width=22pt, align=center, line width=1.0pt},
+NeuralLineLayer/.style={arrows={latex-},draw=black,line width=1.5pt,rounded corners=4pt},
+NeuralNetworkTittle/.style={text width=4em, text centered},
+NeuralNetworkTittle/.style={text width=4em, text centered},
+NeuralNetworkTittle/.style={text width=4em, text centered},
 }
 \begin{document}
-\begin{tikzpicture}[]\node[A, text width=38pt, minimum size=38pt,pin={[pin edge={latex-}, pin distance=35pt]left:{$->$}},
-                pin={[pin edge={latex-}, pin distance=35pt]right:{$->$}},
-                ] (A) at (0,0) {$x1$};
+\begin{tikzpicture}[]
+	\foreach \y in {1,...,3}
+		\node[I,] (I\y) at (0,35pt-\y*35pt) {$x_\y$};
+	\foreach \y in {1,...,4}
+		\node[H,] (H\y) at (80pt,52.5pt-\y*35pt) {$y_\y$};\foreach \dest in {1,...,4}
+        \foreach \source in {1,...,3}
+            \draw[NeuralLineLayer] (H\dest) edge (I\source);
+
+	\foreach \y in {1,...,2}
+		\node[O,] (O\y) at (160pt,17.5pt-\y*35pt) {$z_\y$};\foreach \dest in {1,...,2}
+        \foreach \source in {1,...,4}
+            \draw[NeuralLineLayer] (O\dest) edge (H\source);
+
+	\node[NeuralNetworkTittle, above of=I1]  at (I1 |- H1) {Input};
+	\node[NeuralNetworkTittle, above of=H1]  at (H1 |- H1) {Hidden};
+	\node[NeuralNetworkTittle, above of=O1]  at (O1 |- H1) {Output};
 \end{tikzpicture}
 \end{document}
