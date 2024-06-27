@@ -8,11 +8,12 @@
 """
 
 from element.grid import Grid
+from utils import generate_doc
 
 
 class Features(Grid):
-    def __init__(self, features, size='Large'):
-        super().__init__()
+    def __init__(self, features, size='Large', e_position=(5, -5)):
+        super().__init__(e_position=e_position)
         self.fpr = self.e_position[0]
         self.features = features
         self.size = size
@@ -23,6 +24,6 @@ class Features(Grid):
 
 if __name__ == '__main__':
     f = Features([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25])
-    print(f.draw())
+    generate_doc([f])
 
 

@@ -31,7 +31,8 @@ def load_environment(environment):
 def load_style(arch):
     return_str = '\\tikzset{\n'
     for c in arch:
-        return_str += c.get_style() + '\n'
+        if hasattr(c, 'get_style'):
+            return_str += c.get_style() + '\n'
     return_str += '}'
     return return_str
 
