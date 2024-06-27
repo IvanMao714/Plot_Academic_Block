@@ -59,7 +59,7 @@ if __name__ == '__main__':
                            Rectangle((0, -1), (1, -2), 'blue!25!white', (0, 0)),
                            Rectangle((1, -1), (2, -2), 'green!25!white', (0, 0))]),
             features=Features([1, 2, 3, 4], e_position=(2, -2)),
-            title=GridTitle(50, 'Max Pooling'),
+            title=GridTitle(50, 'Max Pooling', yshift=15, xshift=0),
         ),
 
 

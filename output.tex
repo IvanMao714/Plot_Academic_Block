@@ -22,6 +22,6 @@ Line/.style={draw=black, ->, line width=1.5pt},
 \draw[shift={(0, 0)}, fill=blue!25!white] (0, -1) rectangle (1, -2);
 \draw[shift={(0, 0)}, fill=green!25!white] (1, -1) rectangle (2, -2);
 \draw[step=1, ultra thick, color=black, fill=black!25!white, draw=black, shift={(p)}] (0, 0) grid (2, -2)foreach[count=~] \l in {1, 2, 3, 4} {({0.5+mod(~-1,2}, {-0.5-div(~-1,2}) node {\Large \l}};
-	\node[align=center, text width=50pt, yshift = 10pt, xshift=2pt, right of=p] (5) {Max Pooling};\end{tikzpicture}};
+	\node[align=center, text width=50pt, yshift = 15pt, xshift=0pt, right of=p] (5) {Max Pooling};\end{tikzpicture}};
 \end{tikzpicture}
 \end{document}
