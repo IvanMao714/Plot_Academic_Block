@@ -10,7 +10,7 @@ from utils import generate_doc
 
 
 class Rectangle:
-    def __init__(self, s_position=(0, 0), e_position=(5, -5), fill='black!25!white', shift=(0, 0)):
+    def __init__(self, s_position=(0, 0), e_position=(5, -5), fill='black!25!white', shift='(p)'):
         self.s_position = s_position
         self.e_position = e_position
         self.fill = fill

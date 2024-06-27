@@ -13,7 +13,7 @@ class Grid:
     # s_position: start position, e_position: end position, step: grid step, ultra: grid ultra, literal_color: literal color, grid_color: grid color, bg_color: background color, shift: grid position
     def __init__(self, s_position=(0, 0), e_position=(5, -5), step=1, ultra='thick', literal_color='black',
                  grid_color='black',
-                 bg_color='black!25!white', shift=(0, 0)):
+                 bg_color='black!25!white', shift='(p)'):
         self.s_position = s_position
         self.e_position = e_position
         self.grid_step = step
@@ -24,7 +24,7 @@ class Grid:
         self.shift = shift
 
     def draw(self):
-        draw = f"""\\draw[step={self.grid_step}, ultra {self.grid_ultra}, color={self.literal_color}, fill={self.bg_color}, draw={self.grid_color}, shift={{self.shift}}] {self.s_position} grid {self.e_position}"""
+        draw = f"""\\draw[step={self.grid_step}, ultra {self.grid_ultra}, color={self.literal_color}, fill={self.bg_color}, draw={self.grid_color}, shift={{{self.shift}}}] {self.s_position} grid {self.e_position}"""
         return draw
 
     def get_style(self):
